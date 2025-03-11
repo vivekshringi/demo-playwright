@@ -1,0 +1,46 @@
+{
+  "name": "demo-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "reportToJira": "npm run reportResultsToXray; npm run archiveTestResults",
+    "archiveTestResults": "npx ts-node util/archiveTestResults.ts",
+    "reportResultsToXray": "npx ts-node util/reportToXray.ts",
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write",
+    "lint": "tsc --noEmit && eslint . ",
+    "lint:fix": "eslint --fix .",
+    "e2e": "npx playwright test tests/e2e/",
+    "runE2EAndReport": "npm run e2e && npm run reportResultsToXray ;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivekshringi/demo-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vivekshringi/demo-playwright/issues"
+  },
+  "homepage": "https://github.com/vivekshringi/demo-playwright#readme",
+  "description": "",
+  "dependencies": {
+    "@playwright/test": "^1.51.0",
+    "playwright": "^1.51.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@eslint/js": "^9.18.0",
+    "dotenv": "^16.4.7",
+    "@xray-app/playwright-junit-reporter": "^0.4.0",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "10.0.1",
+    "eslint-plugin-playwright": "^2.1.0",
+    "eslint-plugin-prettier": "5.2.2",
+    "prettier": "3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  }
+}

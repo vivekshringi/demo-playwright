@@ -1,0 +1,92 @@
+{
+  "ecosystemSnapshotVersion": 168,
+  "schema-version": "1",
+  "component": {
+    "schema-version": "3",
+    "id": "b899068b-5988-422f-9c2b-f0e925acbf3d",
+    "name": "atlassian-connect-express-template",
+    "type": "library"
+  },
+  "values": {
+    "initialGitBranch": {
+      "suppliedBy": [
+        {
+          "value": "develop"
+        }
+      ]
+    },
+    "isUsingGit": {
+      "suppliedBy": [
+        {
+          "paverId": "8243b053-e639-4971-a7c6-941cb14c3dec",
+          "value": true
+        }
+      ]
+    },
+    "defaultGitBranch": {
+      "suppliedBy": [
+        {
+          "paverId": "8243b053-e639-4971-a7c6-941cb14c3dec",
+          "value": "develop"
+        }
+      ]
+    },
+    "repoName": {
+      "suppliedBy": [
+        {
+          "value": "atlassian/atlassian-connect-express-template"
+        }
+      ]
+    },
+    "bitbucket": {
+      "suppliedBy": [
+        {
+          "paverId": "c2891e77-06e4-4052-b762-9b15e84dd7d6",
+          "value": {
+            "repository": {
+              "name": "atlassian-connect-express-template",
+              "uuid": "{23d4e08e-1e62-44fa-b20b-5ce0377995a5}",
+              "remoteUrl": "git@bitbucket.org:atlassian/atlassian-connect-express-template.git",
+              "mainBranch": "develop",
+              "slug": "atlassian-connect-express-template"
+            },
+            "workspace": {
+              "name": "Atlassian",
+              "uuid": "{02b941e3-cfaa-40f9-9a58-cec53e20bdc3}",
+              "slug": "atlassian"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "ppt": {
+    "pavers": {
+      "8243b053-e639-4971-a7c6-941cb14c3dec": {
+        "id": "8243b053-e639-4971-a7c6-941cb14c3dec",
+        "name": "git",
+        "label": "Git",
+        "description": "Git for version control.",
+        "version": "1.16.0",
+        "isPublished": true
+      },
+      "c2891e77-06e4-4052-b762-9b15e84dd7d6": {
+        "id": "c2891e77-06e4-4052-b762-9b15e84dd7d6",
+        "name": "bitbucket-scm",
+        "label": "Bitbucket Source Code Management",
+        "description": "Manages your Bitbucket repository.",
+        "version": "1.15.0",
+        "isPublished": true
+      },
+      "03eb6f67-85f6-416d-bedb-7f9ad52c5a0c": {
+        "id": "03eb6f67-85f6-416d-bedb-7f9ad52c5a0c",
+        "name": "renovate",
+        "label": "Renovate",
+        "description": "Automates the process of updating your dependencies by raising Pull Requests.",
+        "version": "1.18.0",
+        "isPublished": true
+      }
+    },
+    "bundles": {}
+  }
+}

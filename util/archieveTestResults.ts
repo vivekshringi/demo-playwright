@@ -48,5 +48,4 @@ async function archiveTestResults() {
   }
 }
 
-archiveTestResults();
-
+void archiveTestResults();

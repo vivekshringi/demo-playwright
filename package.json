@@ -6,7 +6,8 @@
     "test": "npx playwright test",
     "reportToJira": "npm run reportResultsToXray; npm run archiveTestResults",
     "archiveTestResults": "npx ts-node util/archiveTestResults.ts",
-    "reportResultsToXray": "npx ts-node util/reportToXray.ts",
+    "reportResultsToXray": "npx ts-node util/reportToJira.ts",
+    "fetch": "npx ts-node util/importDataFromJira.ts",
     "format:check": "prettier . --check",
     "format:write": "prettier . --write",
     "lint": "tsc --noEmit && eslint . ",
@@ -31,10 +32,11 @@
     "playwright": "^1.51.0"
   },
   "devDependencies": {
-    "@types/node": "^22.13.10",
     "@eslint/js": "^9.18.0",
-    "dotenv": "^16.4.7",
+    "@types/node": "^22.13.10",
     "@xray-app/playwright-junit-reporter": "^0.4.0",
+    "axios": "^1.8.2",
+    "dotenv": "^16.4.7",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-playwright": "^2.1.0",

@@ -1,0 +1,16 @@
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
+playwright/.auth/
+*.env
+.vscode
+.idea
+.DS_Store
+dist
+.prettierrc
+
+package-lock.json
+**/*.sh
+**/*.png
+.prettierignore

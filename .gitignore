@@ -1,0 +1,12 @@
+
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+.npmrc
+/output/
+dist/
+test-results-archive/
+.env
+

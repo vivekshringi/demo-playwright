@@ -36,7 +36,7 @@ export default defineConfig({
     headless: true,
     baseURL: "https://coffee-cart.app/",
     trace: "on-first-retry",
-    screenshot: "on",
+    screenshot: "off",
     locale: "de-DE",
   },
 

@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { HomePage } from "../pages/homePage";
+import { HomePage } from "../pages/HomePage";
 
 const testURL = "https://coffee-cart.app";
 
@@ -97,7 +97,7 @@ test.describe("home page @Home", () => {
 
   test("Verify clicking on Total navigates user to Payment detail pop up", async ({}, testInfo) => {
     //Adding Xray properties
-    testInfo.annotations.push({ type: "test_key", description: "SCRUM-14" });
+    testInfo.annotations.push({ type: "test_key", description: "SCRUM-13" });
     testInfo.annotations.push({
       type: "requirement",
       description: "SCRUM-24",
@@ -208,7 +208,20 @@ test.describe("home page @Home", () => {
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-4" });
     testInfo.annotations.push({
       type: "requirement",
-      description: "SCRUM-29",
+      description: "SCRUM-16",
+    });
+    testInfo.annotations.push({
+      type: "tags",
+      description: "automated, Playwright",
+    });
+  });
+
+  test("Verify promotional offer on adding every 3rd coffee into the shopping cart", async ({}, testInfo) => {
+    //Adding Xray properties
+    testInfo.annotations.push({ type: "test_key", description: "SCRUM-25" });
+    testInfo.annotations.push({
+      type: "requirement",
+      description: "SCRUM-28",
     });
     testInfo.annotations.push({
       type: "tags",

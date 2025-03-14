@@ -21,10 +21,10 @@ jobs:
       run: npx playwright test
     - name: Post results to Jira
       env:
-      JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN}}
-      JIRA_URL: ${{ secrets.JIRA_URL}}
-      JIRA_PROJECT_KEY: ${{ secrets.JIRA_PROJECT_KEY}}
-      TEST_PLAN_KEY: ${{ secrets.TEST_PLAN_KEY}}
+        JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN}}
+        JIRA_URL: ${{ secrets.JIRA_URL}}
+        JIRA_PROJECT_KEY: ${{ secrets.JIRA_PROJECT_KEY}}
+        TEST_PLAN_KEY: ${{ secrets.TEST_PLAN_KEY}}
       run: npm run reportResultsToXray
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}

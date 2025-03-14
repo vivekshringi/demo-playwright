@@ -10,7 +10,7 @@
       "resolveJsonModule": true,
       "types": ["node", "playwright"]
     },
-    "include": ["**/*.ts"],
+    "include": ["**/*.ts","**/*.mjs"],
     "exclude": ["node_modules"]
   }
   

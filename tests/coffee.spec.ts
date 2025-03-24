@@ -95,7 +95,8 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("Verify clicking on Total navigates user to Payment detail pop up", async ({}, testInfo) => {
+  test("Verify clicking on Total navigates user to Payment detail pop up",
+   async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-13" });
     testInfo.annotations.push({

@@ -2,7 +2,6 @@ import { test, expect } from '@playwright/test';
 
 const testURL = "https://coffee-cart.app/"
 
-
 test.describe('coffee-cart app',() => {
   test.beforeEach(async ({ page }) => {
     await page.goto(testURL);
@@ -131,5 +130,6 @@ await expect(page.getByText('Espresso Macchiato$12.00 x 1')).toBeVisible();
 test("Verify navigating github page for more information about the application",async ({ page }) => {
 await page.goto('https://coffee-cart.app/github');
 await page.getByRole('listitem').filter({ hasText: 'github' }).click();
-await expect(page.locator('#app')).toContainText('Here are the extra actions you can perform apart from the usual add to cart flows.');});
+await expect(page.locator('#app')).toContainText('Here are the extra actions you can perform apart from the usual add to cart flows.');
+});
 });

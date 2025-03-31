@@ -1,11 +1,22 @@
 import { test, expect } from '@playwright/test';
+import { MenuPage } from "../pages/MenuPage";
+import { CartPage } from "../pages/CartPage";
+import { CheckoutPage } from "../pages/CheckoutPage";
 
 const testURL = "https://coffee-cart.app/"
 
 
 test.describe('coffee-cart app',() => {
+   let menuPage : MenuPage;
+   let cartPage : CartPage;
+   let checkoutPage : CheckoutPage;
+
+
   test.beforeEach(async ({ page }) => {
     await page.goto(testURL);
+    menuPage = new MenuPage(page);
+    cartPage = new CartPage(page);
+    checkoutPage = new CheckoutPage(page);
   });
 
 

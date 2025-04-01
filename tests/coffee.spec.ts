@@ -3,6 +3,7 @@ import { HomePage } from "../pages/HomePage";
 
 const testURL = "https://coffee-cart.app";
 
+// just remove it
 test.describe("home page @Home", () => {
   let homePage: HomePage;
 

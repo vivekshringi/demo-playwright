@@ -3,8 +3,7 @@ import { MenuPage } from "../pages/MenuPage";
 import { CartPage } from "../pages/CartPage";
 import { CheckoutPage } from "../pages/CheckoutPage";
 
-const testURL = "https://coffee-cart.app/"
-
+const testURL = "https://coffee-cart.app/";
 
 test.describe('coffee-cart app',() => {
    let menuPage : MenuPage;
@@ -142,5 +141,6 @@ await expect(page.getByText('Espresso Macchiato$12.00 x 1')).toBeVisible();
 test("Verify navigating github page for more information about the application",async ({ page }) => {
 await page.goto('https://coffee-cart.app/github');
 await page.getByRole('listitem').filter({ hasText: 'github' }).click();
-await expect(page.locator('#app')).toContainText('Here are the extra actions you can perform apart from the usual add to cart flows.');});
+await expect(page.locator('#app')).toContainText('Here are the extra actions you can perform apart from the usual add to cart flows.');
+});
 });

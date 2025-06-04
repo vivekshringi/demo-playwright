@@ -1,0 +1,10 @@
+[
+  { "coffeeName": "Espresso", "translation": "特浓咖啡" },
+  { "coffeeName": "Espresso Macchiato", "translation": "浓缩玛奇朵" },
+  { "coffeeName": "Cappuccino", "translation": "卡布奇诺" },
+  { "coffeeName": "Mocha", "translation": "摩卡" },
+  { "coffeeName": "Flat White", "translation": "平白咖啡" },
+  { "coffeeName": "Americano", "translation": "美式咖啡" },
+  { "coffeeName": "Cafe Latte", "translation": "拿铁" },
+  { "coffeeName": "Cafe Breve", "translation": "半拿铁" }
+]

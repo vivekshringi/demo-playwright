@@ -1,0 +1,7 @@
+[
+  {
+    "name": "Indian Tea",
+    "price": 100,
+    "recipe": [{ "name": "espresso", "quantity": 50 }]
+  }
+]

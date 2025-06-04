@@ -29,11 +29,12 @@ export default defineConfig({
   reporter: [
     ["html", { open: "never", outputFolder: "output/playwright-report" }],
     ["@xray-app/playwright-junit-reporter", xrayReportOptions],
-    ["list", { printSteps: true }],
+    ["list", { printSteps: false }],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     headless: true,
+    testIdAttribute: "data-test",
     baseURL: "https://coffee-cart.app/",
     trace: "on-first-retry",
     screenshot: "off",

@@ -9,7 +9,7 @@ test.describe("home page @Home", () => {
   const username = faker.internet.username();
   const email = faker.internet.email();
 
-  test.only(`should get the payment link on email`, async ({ homePage }, testInfo) => {
+  test(`should get the payment link on email`, async ({ homePage }, testInfo) => {
     await test.step("given I am on the home page", async () => {
       await expect.soft(homePage.inputName).toBeVisible();
       await expect(homePage.page).toHaveURL(testURL);

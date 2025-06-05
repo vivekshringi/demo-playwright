@@ -9,8 +9,9 @@ test.describe("home page @Home", () => {
   const username = faker.internet.username();
   const email = faker.internet.email();
 
-  test(`should get the payment link on email`, async ({ homePage }, testInfo) => {
+  test.only(`should get the payment link on email`, async ({ homePage }, testInfo) => {
     await test.step("given I am on the home page", async () => {
+      await expect.soft(homePage.inputName).toBeVisible();
       await expect(homePage.page).toHaveURL(testURL);
     });
 
@@ -58,7 +59,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if updating count of every coffee item in the shopping cart", async ({ }, testInfo) => {
+  test("if updating count of every coffee item in the shopping cart", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-38" });
     testInfo.annotations.push({
@@ -71,7 +72,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if hovering coffee on coffee page shows the animation by tilting the coffee item and changes color to Orange", async ({ }, testInfo) => {
+  test("if hovering coffee on coffee page shows the animation by tilting the coffee item and changes color to Orange", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-37" });
     testInfo.annotations.push({
@@ -80,7 +81,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if the ingredients of every coffee in coffee catalog page", async ({ }, testInfo) => {
+  test("if the ingredients of every coffee in coffee catalog page", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-31" });
     testInfo.annotations.push({
@@ -89,7 +90,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if checking advertisement by activating ad into URL", async ({ }, testInfo) => {
+  test("if checking advertisement by activating ad into URL", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-19" });
     testInfo.annotations.push({
@@ -98,7 +99,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if by double click on any coffee item translate the coffee name into chinese", async ({ }, testInfo) => {
+  test("if by double click on any coffee item translate the coffee name into chinese", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-15" });
     testInfo.annotations.push({
@@ -107,7 +108,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if removing items from shopping cart by hovering on Total icon", async ({ }, testInfo) => {
+  test("if removing items from shopping cart by hovering on Total icon", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-14" });
     testInfo.annotations.push({
@@ -116,7 +117,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if clicking on Total navigates user to Payment detail pop up", async ({ }, testInfo) => {
+  test("if clicking on Total navigates user to Payment detail pop up", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-13" });
     testInfo.annotations.push({
@@ -129,7 +130,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if hovering on Total icon shows all the coffee in the cart", async ({ }, testInfo) => {
+  test("if hovering on Total icon shows all the coffee in the cart", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-12" });
     testInfo.annotations.push({
@@ -142,7 +143,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if removing items in the cart when some coffee items are already available in the cart page", async ({ }, testInfo) => {
+  test("if removing items in the cart when some coffee items are already available in the cart page", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-11" });
     testInfo.annotations.push({
@@ -155,7 +156,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if navigating github page for more information about the application", async ({ }, testInfo) => {
+  test("if navigating github page for more information about the application", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-10" });
     testInfo.annotations.push({
@@ -168,7 +169,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if user can always navigate to shopping cart page using cart in the header", async ({ }, testInfo) => {
+  test("if user can always navigate to shopping cart page using cart in the header", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-9" });
     testInfo.annotations.push({
@@ -181,7 +182,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if adding a coffee in the shopping cart by right click on any coffee item", async ({ }, testInfo) => {
+  test("if adding a coffee in the shopping cart by right click on any coffee item", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-8" });
     testInfo.annotations.push({
@@ -194,7 +195,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if adding a coffee in the shopping cart by left click on any coffee item", async ({ }, testInfo) => {
+  test("if adding a coffee in the shopping cart by left click on any coffee item", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-7" });
     testInfo.annotations.push({
@@ -226,7 +227,7 @@ test.describe("home page @Home", () => {
     await expect(homePage.cart).toHaveText("cart (0)");
   });
 
-  test("if opening coffee application navigates the user to Coffee catalog Page", async ({ }, testInfo) => {
+  test("if opening coffee application navigates the user to Coffee catalog Page", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-4" });
     testInfo.annotations.push({
@@ -239,7 +240,7 @@ test.describe("home page @Home", () => {
     });
   });
 
-  test("if promotional offer on adding every 3rd coffee into the shopping cart", async ({ }, testInfo) => {
+  test("if promotional offer on adding every 3rd coffee into the shopping cart", async ({}, testInfo) => {
     //Adding Xray properties
     testInfo.annotations.push({ type: "test_key", description: "SCRUM-25" });
     testInfo.annotations.push({

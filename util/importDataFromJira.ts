@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const token = process.env.JIRA_API_TOKEN;
-const email = "vivek.shringi01@nagarro.com";
+const email = process.env.EMAIL;
 const baseUrl = process.env.JIRA_URL;
 
 const encodedCredentials = Buffer.from(`${email}:${token}`).toString("base64");

@@ -18,7 +18,8 @@ export const test = base.extend<MyFixtures, { coffee: Coffee }>({
     {
       option: true,
       scope: "worker",
-  }],
+    },
+  ],
   homePage: async ({ page }, use) => {
     await page.goto("/");
     const homePage = new HomePage(page);

@@ -55,7 +55,6 @@ test.describe("coffee menu @coffeeMenu", () => {
   test("if cart price and count on menu is upadated on ordering any coffee from the coffee menu @coffeeMenu", async () => {
     test.slow();
     // to increase the timeout to triple
-    await homePage.page.waitForTimeout(21000);
     await homePage.clickOn("Americano");
     const expectedPrice = await homePage.getCoffeePrice("Americano");
     await expect(homePage.cart).toContainText("cart (1)");

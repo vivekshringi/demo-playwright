@@ -1,4 +1,4 @@
-import { type Locator, type Page } from "@playwright/test";
+import { expect, type Locator, type Page } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
 export class HomePage extends BasePage {
@@ -10,6 +10,11 @@ export class HomePage extends BasePage {
   public readonly coffeeImage: Locator;
   public readonly coffee: Locator;
   public readonly totalButton: Locator;
+  public readonly inputName: Locator;
+  public readonly inputEmail: Locator;
+  public readonly checkBoxForOrderUpdateAndPromotionalMessage: Locator;
+  public readonly submit: Locator;
+  public readonly message: Locator;
 
   constructor(page: Page) {
     super(page);
@@ -21,6 +26,11 @@ export class HomePage extends BasePage {
     this.coffeeImage = page.locator(".cup");
     this.coffee = page.getByRole("list").getByRole("heading");
     this.totalButton = page.getByTestId("checkout");
+    this.inputName = page.locator("input#name");
+    this.inputEmail = page.locator("input#email");
+    this.checkBoxForOrderUpdateAndPromotionalMessage = page.locator('input[type="checkbox"][name="promotion"]');
+    this.submit = page.getByRole("button").getByText("Submit");
+    this.message = page.locator(".snackbar.success");
   }
 
   async hoverOn() {
@@ -70,6 +80,17 @@ export class HomePage extends BasePage {
     const end = previ.indexOf(".");
     const balance = Number(previ.substring(start + 1, end));
     return balance;
+  }
+
+  async submitPaymentDetails(userName: string, userEmail: string, getOrderUpdate: boolean) {
+    await this.inputName.fill(userName);
+    await this.inputEmail.fill(userEmail);
+    if (getOrderUpdate) {
+      await this.checkBoxForOrderUpdateAndPromotionalMessage.check();
+    }
+    await this.submit.click();
+    await expect(this.message).toBeVisible();
+    await expect(this.message).toContainText("Thanks for your purchase. Please check your email for payment.");
   }
 
   async getIngredientsPercent(coffeeName: string) {

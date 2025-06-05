@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test1": "npx playwright test  --shard=1/2 ",
+    "test2": "npx playwright test  --shard=2/2 ",
     "test": "npx playwright test",
     "reportToJira": "npm run reportResultsToXray; npm run archiveTestResults",
     "archiveTestResults": "npx ts-node util/archiveTestResults.ts",
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.18.0",
+    "@faker-js/faker": "^9.8.0",
     "@types/node": "^22.13.10",
     "@xray-app/playwright-junit-reporter": "^0.4.0",
     "axios": "^1.8.2",

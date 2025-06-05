@@ -18,7 +18,7 @@ const xrayReportOptions = {
 export default defineConfig({
   testDir: "./tests",
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -33,12 +33,16 @@ export default defineConfig({
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: true,
+    headless: false,
     testIdAttribute: "data-test",
     baseURL: "https://coffee-cart.app/",
     trace: "on-first-retry",
-    screenshot: "off",
+    screenshot: "on",
     locale: "de-DE",
+    launchOptions: {
+      args: ["--start-maximized"],
+      slowMo: 500,
+    }
   },
 
   /* Configure projects for major browsers */
